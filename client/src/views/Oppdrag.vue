@@ -19,7 +19,7 @@ export default {
   },
   mounted() {
     axios
-      .get("http://192.168.14.152:9000/api")
+      .get("http://localhost:9000/api")
       .then((res) => this.oppdrag = res.data)
       .catch(error => console.log(error))
   },
