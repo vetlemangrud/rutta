@@ -20,6 +20,11 @@ router
   .post('/oppdrag', createOppdrag)
   .get('/oppdrag', readOppdrag)
   .put('/oppdrag/:id', updateOppdrag)
-  .delete('/oppdrag/:id', deleteOppdrag);
+  .delete('/oppdrag/:id', deleteOppdrag)
+
+  .post('/user', createUser)
+  .get('/user', readUser)
+  .put('/user/:id', updateUser)
+  .delete('/user/:id', deleteUser);
 
 module.exports = router;
