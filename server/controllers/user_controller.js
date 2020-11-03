@@ -21,7 +21,7 @@ const createData = (req, res) => {
 };
 
 const readData = (req, res) => {
-  Oppdrag.find()
+  Oppdrag.find(req.query)
     .then((data) => {
       res.status(200).json(data);
     })
