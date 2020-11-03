@@ -1,0 +1,8 @@
+{
+  "name": "rutta",
+  "template": "Default",
+  "isConfigured": {
+    "client": true,
+    "server": true
+  }
+}
