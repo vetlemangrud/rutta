@@ -2,8 +2,8 @@
   <div id="app">
     <div id="nav">
       <h1>rutta</h1>
-      <!-- <router-link to="/">Home</router-link> | -->
-      <!-- <router-link to="/about">About</router-link> -->
+      <router-link to="/">Toppliste</router-link> |
+      <router-link to="/oppdrag">Oppdrag</router-link>
     </div>
     <router-view />
   </div>
@@ -24,10 +24,10 @@
 
 #nav a {
   font-weight: bold;
-  color: #A1CCA5;
+  color: #F34213;
 }
 
 #nav a.router-link-exact-active {
-  color: #F34213;
+  color: #A1CCA5;
 }
 </style>
