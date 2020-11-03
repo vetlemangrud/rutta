@@ -1,12 +1,12 @@
 'use strict';
 
-const Oppdrag = require('../models/oppdrag_schema');
+const User = require('../models/user_schema');
 
-const createOppdrag = (req, res) => {
+const createUser = (req, res) => {
   console.log(req.body)
-  Oppdrag.create(req.body)
+  User.create(req.body)
     .then((data) => {
-      console.log('New Oppdrag Created!', data);
+      console.log('New User Created!', data);
       res.status(201).json(data);
     })
     .catch((err) => {
@@ -20,8 +20,8 @@ const createOppdrag = (req, res) => {
     });
 };
 
-const readOppdrag = (req, res) => {
-  Oppdrag.find(req.query)
+const readUser = (req, res) => {
+  User.find(req.query)
     .then((data) => {
       res.status(200).json(data);
     })
@@ -31,13 +31,13 @@ const readOppdrag = (req, res) => {
     });
 };
 
-const updateOppdrag = (req, res) => {
-  Oppdrag.findByIdAndUpdate(req.params.id, req.body, {
+const updateUser = (req, res) => {
+  User.findByIdAndUpdate(req.params.id, req.body, {
     useFindAndModify: false,
     new: true,
   })
     .then((data) => {
-      console.log('Oppdrag updated!');
+      console.log('User updated!');
       res.status(201).json(data);
     })
     .catch((err) => {
@@ -51,16 +51,16 @@ const updateOppdrag = (req, res) => {
     });
 };
 
-const deleteOppdrag = (req, res) => {
-  Oppdrag.findById(req.params.id)
+const deleteUser = (req, res) => {
+  User.findById(req.params.id)
     .then((data) => {
       if (!data) {
-        throw new Error('Oppdrag not available');
+        throw new Error('User not available');
       }
       return data.remove();
     })
     .then((data) => {
-      console.log('Oppdrag removed!');
+      console.log('User removed!');
       res.status(200).json(data);
     })
     .catch((err) => {
@@ -70,8 +70,8 @@ const deleteOppdrag = (req, res) => {
 };
 
 module.exports = {
-  createOppdrag,
-  readOppdrag,
-  updateOppdrag,
-  deleteOppdrag,
+  createUser,
+  readUser,
+  updateUser,
+  deleteUser,
 };
