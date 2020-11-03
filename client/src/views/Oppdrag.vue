@@ -19,7 +19,7 @@ export default {
   },
   mounted() {
     axios
-      .get("http://localhost:9000/api")
+      .get("http://localhost:9000/api?ferdig=false")
       .then((res) => this.oppdrag = res.data)
       .catch(error => console.log(error))
   },
