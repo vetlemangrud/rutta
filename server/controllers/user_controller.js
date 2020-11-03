@@ -6,7 +6,7 @@ const createData = (req, res) => {
   console.log(req.body)
   Oppdrag.create(req.body)
     .then((data) => {
-      console.log('New User Created!', data);
+      console.log('New Oppdrag Created!', data);
       res.status(201).json(data);
     })
     .catch((err) => {
