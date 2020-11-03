@@ -7,7 +7,7 @@
 </template>
 
 <script>
-import axios from 'axios';
+import axios from "axios";
 
 export default {
   name: "HelloWorld",
@@ -17,28 +17,30 @@ export default {
     ferdig: Boolean
   },
   methods: {
-    fullfoer: function () {
+    fullfoer: function() {
       this.ferdig = true;
       axios
-        .put("http://localhost:9000/api/oppdrag/"+this.$vnode.key, {ferdig: true})
-        .then((res) => this.oppdrag = res.data)
-        .catch(error => console.log(error))
-      }
+        .put("http://localhost:9000/api/oppdrag/" + this.$vnode.key, {
+          ferdig: true
+        })
+        .then(res => (this.oppdrag = res.data))
+        .catch(error => console.log(error));
+    }
   }
 };
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-  .oppdragskort{
-    background-color: #A1CCA5;
-    width: 50%;
-    margin: auto;
-    margin-bottom: 10px;
-    padding: 10px;
-    color: #3E2F5B;
-  }
-  .ferdigknapp{
-    background-color: #F34213;
-  }
+.oppdragskort {
+  background-color: #a1cca5;
+  width: 50%;
+  margin: auto;
+  margin-bottom: 10px;
+  padding: 10px;
+  color: #3e2f5b;
+}
+.ferdigknapp {
+  background-color: #f34213;
+}
 </style>
