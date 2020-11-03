@@ -20,7 +20,7 @@ export default {
     fullfoer: function () {
       this.ferdig = true;
       axios
-        .put("192.168.14.152:9000/api/"+this.$vnode.key, {ferdig: true})
+        .put("http://localhost:9000/api/"+this.$vnode.key, {ferdig: true})
         .then((res) => this.oppdrag = res.data)
         .catch(error => console.log(error))
       }
