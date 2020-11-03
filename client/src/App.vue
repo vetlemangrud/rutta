@@ -10,13 +10,12 @@
 </template>
 
 <style>
-
 #app {
-  font-family: 'Roboto Mono', monospace;
+  font-family: "Roboto Mono", monospace;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #F34213;
+  color: #f34213;
 }
 #nav {
   padding: 30px;
@@ -24,10 +23,10 @@
 
 #nav a {
   font-weight: bold;
-  color: #F34213;
+  color: #f34213;
 }
 
 #nav a.router-link-exact-active {
-  color: #A1CCA5;
+  color: #a1cca5;
 }
 </style>

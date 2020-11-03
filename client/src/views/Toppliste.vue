@@ -1,6 +1,8 @@
 <template>
   <div class="home">
-      <p v-for="user in users" :key="user._id">{{ user.name }}</p>
+    <p v-for="user in users" :key="user._id">
+      {{ user.name }}: {{ user.experience }} XP
+    </p>
   </div>
 </template>
 
@@ -17,7 +19,10 @@ export default {
   mounted() {
     axios
       .get("http://localhost:9000/api/user")
-      .then(res => (this.users = res.data))
+      .then(
+        res =>
+          (this.users = res.data.sort((a, b) => b.experience - a.experience))
+      )
       .catch(error => console.log(error));
   }
 };
