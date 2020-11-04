@@ -14,6 +14,10 @@ const oppdragSchema = new Schema(
       type: Boolean,
       required: false,
       default: false
+    },
+    ansvarlig: {
+      type: String,
+      required: false
     }
   },
   { timestamps: true },
