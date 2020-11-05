@@ -4,7 +4,7 @@ const { builtinModules } = require("module")
 
 function initialize(passport) {
 
-    const authenticateUser = (name, password, done) => {
+    const authenticateUser = async (name, password, done) => {
         const user = getUserByName(name)
         if (user == null) {
             return done(null, false, { message: "Ingen bruker med det navnet" })
