@@ -1,7 +1,7 @@
 <template>
   <div id="app">
+    <h1>rutta</h1>
     <div id="nav">
-      <h1>rutta</h1>
       <router-link to="/">Toppliste</router-link> |
       <router-link to="/oppdrag">Oppdrag</router-link>
     </div>
