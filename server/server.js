@@ -23,9 +23,10 @@ app.use(express.static(__dirname + '/views/'));
 
 // Defining route middleware
 app.use('/api', require('./routes/api'));
+app.use('/login', require('./routes/login'));
 
 // Listening to port
 app.listen(port);
-console.log(`Listening On http://localhost:${port}/api`);
+console.log(`Listening On http://localhost:${port}/api og /login`);
 
 module.exports = app;
