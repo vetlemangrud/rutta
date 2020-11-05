@@ -4,8 +4,14 @@ const passport = require("passport");
 
 users = [
   {
+    id: "1234fs213rwfe",
     name: "Vetle",
     password: "Hei"
+  },
+  {
+    id: "asfdgwrt23rwrge",
+    name: "Reidar",
+    password: "Hallo"
   }
 ]
 
@@ -20,7 +26,7 @@ const router = express.Router();
 
 router
   .post("/", passport.authenticate("local", {
-    failureFlash: true
-  }))
+    failureFlash: true,
+  }), (req, res) => res.status(200).json(req.user))
 
 module.exports = router;
