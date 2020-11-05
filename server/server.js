@@ -1,6 +1,14 @@
+if(process.env.NODE_ENV !== "production") {
+    require("dotenv").config
+}
+
+
 // Importing required modules
 const cors = require('cors');
 const express = require('express');
+const passport = require("passport");
+const flash = require("express-flash");
+const session = require("express-session");
 
 // parse env variables
 require('dotenv').config();
@@ -17,6 +25,16 @@ app.use(cors());
 app.use(express.json());
 
 app.set('view engine', 'html');
+
+app.use(express.urlencoded({extended:false}))
+app.use(flash());
+app.use(session({
+    secret: process.env.SESSION_SECRET,
+    resave: false,
+    saveUninitialized: false
+}))
+app.use(passport.initialize())
+app.use(passport.session())
 
 // Static folder
 app.use(express.static(__dirname + '/views/'));
