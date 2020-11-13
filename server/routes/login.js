@@ -6,7 +6,7 @@ users = [
   {
     id: "1234fs213rwfe",
     name: "Vetle",
-    password: "Hei"
+    password: "$2b$10$K.QU80yRd2haq3GlLRF0uuSgi1zHpYlHfK3FnJsDtYyLTqP3i9KIK"
   },
   {
     id: "asfdgwrt23rwrge",
