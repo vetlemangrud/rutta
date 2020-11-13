@@ -21,7 +21,7 @@ export default {
   methods: {
     sendLogin: function() {
       axios
-        .post("http://localhost:9000/login", { name: "Vetle", password: "Hei" })
+        .post("http://localhost:9000/login", { name: this.name, password: this.password})
         .then(res => console.log(res))
         .catch(error => console.log(error));
     }
