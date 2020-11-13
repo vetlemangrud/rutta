@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <LoginInfo />
     <h1>rutta</h1>
     <div id="nav">
       <router-link to="/">Toppliste</router-link> |
@@ -8,6 +9,17 @@
     <router-view />
   </div>
 </template>
+
+<script>
+import LoginInfo from "@/components/LoginInfo.vue";
+
+export default {
+  name: "app",
+  components: {
+    LoginInfo
+  }
+};
+</script>
 
 <style>
 #app {

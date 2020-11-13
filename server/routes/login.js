@@ -27,6 +27,6 @@ const router = express.Router();
 router
   .post("/", passport.authenticate("local", {
     failureFlash: true,
-  }), (req, res) => res.status(200).json(req.user))
+  }), (req, res) => res.status(200).json(req.session))
 
 module.exports = router;

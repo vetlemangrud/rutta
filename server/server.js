@@ -42,7 +42,7 @@ app.use(express.static(__dirname + '/views/'));
 // Defining route middleware
 app.use('/api', require('./routes/api'));
 app.use('/login', require('./routes/login'));
-app.get("/user", (req, res) => res.status(200).json(req.user))
+app.get("/me", (req, res) => res.status(200).json(req.user))
 
 // Listening to port
 app.listen(port);

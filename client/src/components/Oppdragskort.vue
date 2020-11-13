@@ -10,7 +10,7 @@
 import axios from "axios";
 
 export default {
-  name: "HelloWorld",
+  name: "Oppdragskort",
   props: {
     tittel: String,
     beskrivelse: String,
