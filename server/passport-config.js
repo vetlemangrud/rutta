@@ -9,7 +9,7 @@ function initialize(passport, getUserByName, getUserById) {
             return done(null, false, { message: "Ingen bruker med det navnet" })
         }
         try {
-            if(password == user.password) { //await bcrypt.compare(password, user.password)
+            if(await bcrypt.compare(password, user.password)) {
                 return done(null, user)
             } else {
                 return done(null, false, { message: "Feil passord" })
