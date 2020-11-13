@@ -33,12 +33,13 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 .oppdragskort {
-  background-color: #a1cca5;
   width: 50%;
   margin: auto;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   padding: 10px;
-  color: #3e2f5b;
+  color: #f34213;
+  border: #f34213 3px solid;
+  border-radius: 20px;
 }
 .ferdigknapp {
   background-color: #f34213;
