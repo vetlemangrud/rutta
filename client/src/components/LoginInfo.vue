@@ -17,7 +17,7 @@ export default {
   mounted() {
     axios
       .get("http://localhost:9000/me")
-      .then(res => (console.log(res)))
+      .then(res => console.log(res))
       .catch(error => console.log(error));
   }
 };

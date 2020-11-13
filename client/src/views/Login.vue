@@ -1,8 +1,8 @@
 <template>
   <div class="login">
     <h2>Logg inn</h2>
-    Navn: <input id="name" v-model="name"/><br />
-    Passord: <input id="password" v-model="password" type="password"/><br />
+    Navn: <input id="name" v-model="name" /><br />
+    Passord: <input id="password" v-model="password" type="password" /><br />
     <button v-on:click="sendLogin">Logg inn</button>
   </div>
 </template>
@@ -21,9 +21,9 @@ export default {
   methods: {
     sendLogin: function() {
       axios
-      .post("http://localhost:9000/login", {name:"Vetle", password:"Hei"})
-      .then(res => (console.log(res)))
-      .catch(error => console.log(error));
+        .post("http://localhost:9000/login", { name: "Vetle", password: "Hei" })
+        .then(res => console.log(res))
+        .catch(error => console.log(error));
     }
   }
 };
